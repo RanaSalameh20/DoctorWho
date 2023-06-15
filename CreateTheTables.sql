@@ -57,3 +57,6 @@ CONSTRAINT FK_Epidoe_AuthorId FOREIGN KEY(AuthorId) REFERENCES tblAuthor(AuthorI
 ALTER TABLE tblEpisodeCompanion
 ADD CONSTRAINT FK_EpisodeCompanion_EpisodeId FOREIGN KEY (EpisodeID) REFERENCES tblEpisode(EpisodeID),
 CONSTRAINT FK_EpisodeCompanion_CompanionId FOREIGN KEY (CompanionID) REFERENCES tblCompanion(CompanionID);
+
+
+EXEC sp_rename 'tblEpisodeCompanion.EpisodeCompanionId', 'EpisodeCompanionId', 'COLUMN';

@@ -44,3 +44,6 @@ INSERT INTO tblEpisodeCompanion (EpisodeCompanionId, EpisodeId, CompanionId) VAL
 (3, 3, 3),
 (4, 4, 4),
 (5, 5, 5);
+
+INSERT INTO tblEpisode (EpisodeId, SeriesNumber, EpisodeNumber, EpisodeType, Title, EpisodeDate, AuthorId) VALUES
+(6, 7, 12, 'NotRegular', 'TestNullDoctor', '2015-03-26', 1);
