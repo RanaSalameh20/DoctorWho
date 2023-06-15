@@ -29,7 +29,7 @@ CREATE TABLE tblEpisode(
 	Title VARCHAR(255),
 	EpisodeDate DATE,
 	AuthorId INT NOT NULL,
-	DoctorId INT NOT NULL,
+	DoctorId INT,
 	Notes VARCHAR(255)
 );
 
@@ -58,5 +58,5 @@ ALTER TABLE tblEpisodeCompanion
 ADD CONSTRAINT FK_EpisodeCompanion_EpisodeId FOREIGN KEY (EpisodeID) REFERENCES tblEpisode(EpisodeID),
 CONSTRAINT FK_EpisodeCompanion_CompanionId FOREIGN KEY (CompanionID) REFERENCES tblCompanion(CompanionID);
 
-
-EXEC sp_rename 'tblEpisodeCompanion.EpisodeCompanionId', 'EpisodeCompanionId', 'COLUMN';
+ALTER TABLE tblEpisode
+Alter Column DoctorId INT Null;
