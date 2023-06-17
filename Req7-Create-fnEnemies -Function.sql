@@ -13,5 +13,5 @@ BEGIN
     RETURN @EnemiesList;
 END;
 
-SELECT dbo.@EnemiesList(5);
+SELECT dbo.fnEnemies(5);
 	
