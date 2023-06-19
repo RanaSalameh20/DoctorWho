@@ -1,3 +1,5 @@
+USE DoctorWho;
+
 CREATE TABLE tblEnemy(
     EnemyId INT PRIMARY KEY,
     EnemyName VARCHAR(255),

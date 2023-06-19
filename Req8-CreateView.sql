@@ -1,5 +1,5 @@
 CREATE VIEW viewEpisodes AS
-SELECT e.EpisodeId, e.SeriesNumber, e.EpisodeNumber, e.EpisodeType, e.Title, e.EpisodeDate,
+SELECT e.*,
        a.AuthorName AS Author, d.DoctorName AS Doctor, e.Notes,
        dbo.fnCompanions(e.EpisodeId) AS Companions,
        dbo.fnEnemies(e.EpisodeId) AS Enemies
